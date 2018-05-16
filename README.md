@@ -64,4 +64,6 @@ After build, in build directory, open a terminal window and enter:
 
 ## Updates
 
+* 2018/05/16 - 'v0.9' - Added ROOT macro
+
 * 2018/03/13 - 'v0.3' - Creation of program and it's repository

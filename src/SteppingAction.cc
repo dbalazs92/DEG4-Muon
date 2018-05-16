@@ -57,8 +57,8 @@ void SteppingAction::UserSteppingAction(const G4Step* fStep)
 	  if(((preY<=100.5*mm)&&(preY>=-100.5*mm))||((postY<=100.5*mm)&&(postY>=-100.5*mm))){
 		  if(((preZ<=221*mm)&&(preZ>=200*mm))||((postZ<=221*mm)&&(postZ>=200*mm))){
 			  if(particleName=="e-"){
-		G4cout<<"particle_"<<particleName<<" "<<momentumdirection.x()<<" "
-	<<momentumdirection.y()<<" "<<momentumdirection.z()<<" "<< prekinE/keV<<" "<<preX/cm<<" "<<preY/cm<<" "<<preZ/cm<<" "
+		G4cout<<"MuStep "<<particleName<<" "<<momentumdirection.x()<<" "
+	<<momentumdirection.y()<<" "<<momentumdirection.z()<<" "<< edepStep/keV<<" "<<preX/cm<<" "<<preY/cm<<" "<<preZ/cm<<" "
 	<<momentumdirection.theta()<<" "<<momentumdirection.phi()<<" "<<postX/cm<<" "<<postY/cm<<" "<<postZ/cm<<" "
 	<<prevolume->GetName()<<" "<<postvolume->GetName()<<G4endl;
 	}}}}

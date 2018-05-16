@@ -3,6 +3,7 @@
 // 13/03/2018 balazsdemeter92@gmail.com
 
 #include "DetectorConstruction.hh"
+#include "G4Material.hh"
 #include "G4RotationMatrix.hh"
 
 
@@ -24,10 +25,14 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 {  
   // Get nist material manager
   G4NistManager* nist = G4NistManager::Instance();
-	int i=0,j=0;
-   float bz=210.5;
-   G4RotationMatrix rotm  = G4RotationMatrix();
-   rotm.rotateY(90*deg); 
+  G4double density, fractionmass;
+  G4int ncomponents;
+  G4String name;
+  
+  G4int i=0,j=0;
+  G4float bz=210.5;
+  G4RotationMatrix rotm  = G4RotationMatrix();
+  rotm.rotateY(90*deg); 
   // Option to switch on/off checking of volumes overlaps
   G4bool checkOverlaps = true;
 
@@ -53,6 +58,40 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                       logicWorld,            //its logical volume
                       "World",               //its name
                       0,                     //its mother  volume
+                      false,                 //no boolean operation
+                      0,                     //copy number
+                      checkOverlaps);        //overlaps checking
+                     
+ 
+   //     
+  // Gas
+  //
+  G4double gas_sizeX = 178*mm;
+  G4double gas_sizeY = 192*mm;
+  G4double gas_sizeZ  = 21*mm;
+  
+  density=1.4*g/cm3;
+  G4Material* ar = nist->FindOrBuildMaterial("G4_Ar");
+  G4Material* CO2 = nist->FindOrBuildMaterial("G4_CARBON_DIOXIDE");
+  G4Material* gas_mat = new G4Material(name="Ar_CO2_80_20", density, ncomponents=2);
+  gas_mat->AddMaterial(ar, fractionmass=80*perCent);
+  gas_mat->AddMaterial(CO2, fractionmass=20*perCent);
+  
+  G4Box* solidGas =    
+    new G4Box("Gas",                       //its name
+       0.5*gas_sizeX, 0.5*gas_sizeY, 0.5*gas_sizeZ);     //its size
+      
+  G4LogicalVolume* logicGas =                         
+    new G4LogicalVolume(solidGas,          //its solid
+                        gas_mat,           //its material
+                        "Gas");            //its name
+                                   
+  G4VPhysicalVolume* physGas = 
+    new G4PVPlacement(0,                     //no rotation
+                      G4ThreeVector(0,0,210.5*mm),       //at (0,0,0)
+                      logicGas,            //its logical volume
+                      "Gas",               //its name
+                      logicWorld,            //its mother  volume
                       false,                 //no boolean operation
                       0,                     //copy number
                       checkOverlaps);        //overlaps checking
@@ -423,6 +462,11 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 				
                     
   //
+  
+  G4Colour GasColour( 1.0, 0.0, 1.0, 0.4 ); //Gas colour
+  G4VisAttributes* GasVisAtt = new G4VisAttributes( GasColour );
+  logicGas->SetVisAttributes(GasVisAtt);
+  
   G4Colour UpColour( 1.0, 1.0, 1.0, 0.6 ); //Up colour
   G4VisAttributes* UpVisAtt = new G4VisAttributes( UpColour );
   logicUp->SetVisAttributes(UpVisAtt);

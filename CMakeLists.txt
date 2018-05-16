@@ -48,6 +48,7 @@ set(EXAMPLEMuon_SCRIPTS
   run.png
   gui.mac
   vis.mac
+  plotE.cc
   )
 
 foreach(_script ${EXAMPLEMuon_SCRIPTS})

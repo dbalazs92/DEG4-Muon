@@ -17,7 +17,7 @@
 
 PrimaryGeneratorAction::PrimaryGeneratorAction()
 : G4VUserPrimaryGeneratorAction(),
-  fParticleGun(0)
+  fParticleGun(0), fBoxMuller(true)
 {
   G4int n_particle = 1;   //particles per event
   fParticleGun  = new G4ParticleGun(n_particle);
@@ -25,9 +25,9 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
   // default particle kinematic
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
   G4String particleName;
-  G4ParticleDefinition* particle = particleTable->FindParticle(particleName="e-");
+  G4ParticleDefinition* particle = particleTable->FindParticle(particleName="mu-");
   fParticleGun->SetParticleDefinition(particle);
-  fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
+  if(fBoxMuller==false){fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));}
   fParticleGun->SetParticleEnergy(1.*GeV);
 }
 
@@ -42,8 +42,23 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
-  fParticleGun->SetParticlePosition(G4ThreeVector(0,0,0));
-  fParticleGun->GeneratePrimaryVertex(anEvent);
+  if(fBoxMuller==true)
+	{
+	G4double phi, r,rRand,ux,uy;
+	phi=((double)rand()/(double)RAND_MAX)*M_PI*2;
+	rRand=((double)rand()/(double)RAND_MAX);
+	r=8.8*rRand;  
+	ux=r*cos(phi);
+	uy=r*sin(phi);  
+	fParticleGun->SetParticlePosition(G4ThreeVector(ux,uy,0));
+	fParticleGun->GeneratePrimaryVertex(anEvent);
+	fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0,0,1));
+	}
+	else
+	{
+	fParticleGun->SetParticlePosition(G4ThreeVector(0,0,0));
+    fParticleGun->GeneratePrimaryVertex(anEvent);
+	}
 }
 
 //---------------------------------------
