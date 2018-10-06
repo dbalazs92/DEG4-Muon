@@ -13,8 +13,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5e9f634-f0e6-4543-9f9d-db9e3c690141" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DEG4-Muon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DEG4-Muon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Muon.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Muon.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui.mac" beforeDir="false" afterPath="$PROJECT_DIR$/gui.mac" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons.mac" beforeDir="false" afterPath="$PROJECT_DIR$/icons.mac" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/ActionInitialization.hh" beforeDir="false" afterPath="$PROJECT_DIR$/include/ActionInitialization.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/DetectorConstruction.hh" beforeDir="false" afterPath="$PROJECT_DIR$/include/DetectorConstruction.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/EventAction.hh" beforeDir="false" afterPath="$PROJECT_DIR$/include/EventAction.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/PhysicsList.hh" beforeDir="false" afterPath="$PROJECT_DIR$/include/PhysicsList.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/PrimaryGeneratorAction.hh" beforeDir="false" afterPath="$PROJECT_DIR$/include/PrimaryGeneratorAction.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Run.hh" beforeDir="false" afterPath="$PROJECT_DIR$/include/Run.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/RunAction.hh" beforeDir="false" afterPath="$PROJECT_DIR$/include/RunAction.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/SteppingAction.hh" beforeDir="false" afterPath="$PROJECT_DIR$/include/SteppingAction.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.png" beforeDir="false" afterPath="$PROJECT_DIR$/run.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionInitialization.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionInitialization.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DetectorConstruction.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/DetectorConstruction.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventAction.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventAction.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhysicsList.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhysicsList.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimaryGeneratorAction.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimaryGeneratorAction.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Run.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Run.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RunAction.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunAction.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SteppingAction.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/SteppingAction.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis.mac" beforeDir="false" afterPath="$PROJECT_DIR$/vis.mac" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/../Builds/DEG4-Muon/" />
@@ -34,6 +62,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="170" />
@@ -65,7 +96,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Builds/DEG4-Muon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
@@ -103,32 +134,33 @@
       <option name="presentableId" value="Default" />
       <updated>1522341387943</updated>
       <workItem from="1522341389732" duration="208000" />
+      <workItem from="1531299434911" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208000" />
+    <option name="totallyTimeSpent" value="215000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="738" extended-state="6" />
+    <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
